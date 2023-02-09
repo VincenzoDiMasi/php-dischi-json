@@ -26,6 +26,15 @@ main{
     color: white;
 }
 
-.disks .card {
+.poster-box {
+    height: 300px;
+}
+
+.poster {
+    max-height: 100%;
+    width: auto;
+}
+
+.discs .card {
     background-color: var(--secondarybg);
 }

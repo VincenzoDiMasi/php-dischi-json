@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=\, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <!-- BOOTSTRAP -->
         <link
@@ -48,21 +48,20 @@
                 </nav>
             </header>
             <main class="pt-5">
-                <section class="disks container">
+                <section class="discs container">
                     <div class="row row-cols-3">
-                        <div class="col mb-5">
-                            <div class="card text-center">
-                                <figure class="py-4 px-5 mb-0">
-                                    <img
-                                        class="img-fluid"
-                                        src="https://images-na.ssl-images-amazon.com/images/I/51sBr4IWDwL.jpg"
-                                        alt="New Jersey"
-                                    />
-                                </figure>
-                                <h4>New Jersey</h4>
+                        <div v-for="(disc, i) in discs"  :key="i" class="col d-flex justify-content-center mb-5">
+                            <div class="card text-center"> 
+                                <a href="#">
+                                     <figure class="py-4 px-5 mb-0 poster-box">
+                                        <img class="poster" :src="disc.poster" :alt="disc.title" />
+                                    </figure>
+                                </a>
+                               
+                                <h4>{{ disc.title }}</h4>
                                 <address>
-                                    <h5 class="fw-light">Bon Jovi</h5>
-                                    <h4>1988</h4>
+                                    <h5 class="fw-light">{{ disc.author }}</h5>
+                                    <h4>{{ disc.year }}</h4>
                                 </address>
                             </div>
                         </div>
